@@ -1,0 +1,51 @@
+{
+  "name": "galaxy-moon-theme",
+  "displayName": "Galaxy Moon Theme",
+  "description": "A moonlit VS Code theme: warm gold crescent accents over a deep night sky, plus a lavender-tinted light variant.",
+  "version": "1.0.0",
+  "publisher": "lilinhuang",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "icon": "assets/icon.png",
+  "galleryBanner": {
+    "color": "#222122",
+    "theme": "dark"
+  },
+  "keywords": [
+    "theme",
+    "color-theme",
+    "vscode-theme",
+    "light-theme",
+    "dark-theme",
+    "moon",
+    "galaxy",
+    "night",
+    "gold",
+    "lavender",
+    "dark",
+    "astronomy"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Galaxy Moon Theme Light",
+        "uiTheme": "vs",
+        "path": "./themes/galaxy-moon-theme-light-color-theme.json"
+      },
+      {
+        "label": "Galaxy Moon Theme Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/galaxy-moon-theme-dark-color-theme.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vaxicy/galaxy-moon-theme"
+  },
+  "license": "MIT"
+}
