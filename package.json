@@ -2,7 +2,7 @@
   "name": "galaxy-moon-theme",
   "displayName": "Galaxy Moon Theme",
   "description": "A moonlit VS Code theme: warm gold crescent accents over a deep night sky, plus a lavender-tinted light variant.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "lilinhuang",
   "engines": {
     "vscode": "^1.80.0"

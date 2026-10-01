@@ -17,8 +17,8 @@
     "editorIndentGuide.background1": "#D5D4D566",
     "editorIndentGuide.activeBackground1": "#595959",
     "editorWhitespace.foreground": "#D5D4D566",
-    "editor.findMatchBackground": "#A1A1A1",
-    "editor.findMatchHighlightBackground": "#A1A1A177",
+    "editor.findMatchBackground": "#8A8A8A",
+    "editor.findMatchHighlightBackground": "#8A8A8A77",
     "editorBracketMatch.border": "#6C6C6C",
     "editorBracketMatch.background": "#CCCCCC",
     "tab.activeBackground": "#F2F1F2",
@@ -33,9 +33,9 @@
     "list.inactiveSelectionBackground": "#CCCCCC99",
     "list.inactiveSelectionForeground": "#232323",
     "list.hoverBackground": "#F9F7DF",
-    "list.highlightForeground": "#6C6C6C",
+    "list.highlightForeground": "#5A5A5A",
     "button.background": "#FFFDCC",
-    "button.foreground": "#7B7B7B",
+    "button.foreground": "#5C5C5C",
     "button.hoverBackground": "#FFFDCC",
     "badge.background": "#6C6C6C",
     "badge.foreground": "#FFFFFF",
@@ -44,9 +44,9 @@
     "activityBar.inactiveForeground": "#595959",
     "activityBar.activeBorder": "#6C6C6C",
     "activityBarBadge.background": "#FFFDCC",
-    "activityBarBadge.foreground": "#7B7B7B",
-    "scrollbarSlider.background": "#D5D4D588",
-    "scrollbarSlider.hoverBackground": "#D5D4D5BB",
+    "activityBarBadge.foreground": "#5C5C5C",
+    "scrollbarSlider.background": "#6C6C6CCC",
+    "scrollbarSlider.hoverBackground": "#6C6C6CD9",
     "sideBar.background": "#E7E7E7",
     "sideBar.foreground": "#232323",
     "sideBar.border": "#D5D4D5",
@@ -85,42 +85,42 @@
     "notifications.border": "#D5D4D5",
     "quickInput.background": "#E7E7E7",
     "quickInput.foreground": "#232323",
-    "textLink.foreground": "#6C6C6C",
-    "textLink.activeForeground": "#6C6C6C",
-    "editorError.foreground": "#C23B46",
-    "errorForeground": "#C23B46",
+    "textLink.foreground": "#5A5A5A",
+    "textLink.activeForeground": "#404040",
+    "editorError.foreground": "#B0303B",
+    "errorForeground": "#B0303B",
     "editorWarning.foreground": "#83662E",
-    "editorInfo.foreground": "#6C849F",
-    "gitDecoration.addedResourceForeground": "#8A9752",
-    "gitDecoration.modifiedResourceForeground": "#6C8199",
-    "gitDecoration.deletedResourceForeground": "#C23B46",
+    "editorInfo.foreground": "#48637F",
+    "gitDecoration.addedResourceForeground": "#5F6B2E",
+    "gitDecoration.modifiedResourceForeground": "#48637F",
+    "gitDecoration.deletedResourceForeground": "#B0303B",
     "terminal.background": "#F2F1F2",
     "terminal.foreground": "#232323",
     "terminal.ansiBlack": "#1A1A1A",
-    "terminal.ansiRed": "#C23B46",
-    "terminal.ansiGreen": "#8A9752",
+    "terminal.ansiRed": "#B0303B",
+    "terminal.ansiGreen": "#5F6B2E",
     "terminal.ansiYellow": "#83662E",
-    "terminal.ansiBlue": "#6C849F",
-    "terminal.ansiMagenta": "#A66C86",
-    "terminal.ansiCyan": "#619197",
+    "terminal.ansiBlue": "#48637F",
+    "terminal.ansiMagenta": "#8E4A69",
+    "terminal.ansiCyan": "#3F6E74",
     "terminal.ansiWhite": "#595959",
     "terminal.ansiBrightBlack": "#595959",
-    "terminal.ansiBrightRed": "#C23B46",
-    "terminal.ansiBrightGreen": "#8A9752",
+    "terminal.ansiBrightRed": "#B0303B",
+    "terminal.ansiBrightGreen": "#5F6B2E",
     "terminal.ansiBrightYellow": "#83662E",
-    "terminal.ansiBrightBlue": "#6C849F",
-    "terminal.ansiBrightMagenta": "#A66C86",
-    "terminal.ansiBrightCyan": "#619197",
+    "terminal.ansiBrightBlue": "#48637F",
+    "terminal.ansiBrightMagenta": "#8E4A69",
+    "terminal.ansiBrightCyan": "#3F6E74",
     "terminal.ansiBrightWhite": "#232323"
   },
   "semanticHighlighting": true,
   "semanticTokenColors": {
-    "class": "#AC6C88",
-    "interface": "#AC6C88",
-    "enum": "#AC6C88",
-    "type": "#AC6C88",
-    "function": "#60959B",
-    "method": "#60959B",
+    "class": "#8E4A69",
+    "interface": "#8E4A69",
+    "enum": "#8E4A69",
+    "type": "#8E4A69",
+    "function": "#3F6E74",
+    "method": "#3F6E74",
     "parameter": "#232323",
     "property": "#232323",
     "variable": "#232323"
@@ -145,7 +145,7 @@
     {
       "scope": "string",
       "settings": {
-        "foreground": "#8A9752"
+        "foreground": "#5F6B2E"
       }
     },
     {
@@ -164,7 +164,7 @@
         "support.class"
       ],
       "settings": {
-        "foreground": "#AC6C88"
+        "foreground": "#8E4A69"
       }
     },
     {
@@ -173,7 +173,7 @@
         "support.function"
       ],
       "settings": {
-        "foreground": "#60959B"
+        "foreground": "#3F6E74"
       }
     },
     {
@@ -203,7 +203,7 @@
     {
       "scope": "invalid",
       "settings": {
-        "foreground": "#C23B46"
+        "foreground": "#B0303B"
       }
     }
   ]

@@ -25,9 +25,10 @@
   <img src="store-assets/screenshots/en/screenshot-light.png" alt="Galaxy Moon Theme Light preview" width="600">
 </p>
 
-Left is the dark variant, right is the light variant. Both were captured from a real
-Visual Studio Code window with the extension installed, on the same JavaScript file and
-the same layout, so the two previews are directly comparable.
+Left is the dark variant, right is the light variant. Both are rendered straight from the
+two theme JSON files: a 1280x800 mockup of the workbench is built from the shipped colors
+and captured with a headless browser, then sampled back against the JSON. The two shots
+share one layout, so they are directly comparable.
 
 ## Introduction
 
@@ -58,15 +59,16 @@ rose and teal only ever appear inside the code itself.
 ## Syntax
 
 Comments stay quiet and italic (`#595959` / `#9A959A`), keywords and tags keep the
-neutral accent (`#6C6C6C` / `#898989`), strings use a muted sage (`#8A9752` / `#9AA458`),
-numbers and attributes a warm amber (`#83662E` / `#A8833B`), types and classes a dusty
-rose (`#AC6C88` / `#B97995`), and functions a soft teal (`#60959B` / `#6DA2A8`).
+neutral accent (`#6C6C6C` / `#898989`), strings use a muted sage (`#5F6B2E` / `#9AA458`),
+numbers and attributes a warm amber (`#83662E` / `#B18B3D`), types and classes a dusty
+rose (`#8E4A69` / `#B97995`), and functions a soft teal (`#3F6E74` / `#6DA2A8`).
 Semantic highlighting is enabled, so TypeScript, JavaScript and Python pick up accurate
 class, interface, enum, function, method, parameter, property and variable colors on top
 of the TextMate rules.
 
 Every syntax hue is deliberately desaturated, so a file full of code never fights the
-gold workbench for attention.
+gold workbench for attention - and every one of them still clears 4.5:1 against the
+editor canvas, so desaturated never means washed out.
 
 ## Installation
 
@@ -91,11 +93,16 @@ code --install-extension lilinhuang.galaxy-moon-theme
 - Both variants theme the whole workbench, not only the editor: activity bar, side bar,
   tabs, panels, terminal, command list, quick input, widgets, badges, inputs,
   notifications, diffs and Git decorations.
+- Contrast was audited color by color: every text pair clears WCAG AA (4.5:1), every
+  interface element such as the cursor, focus border, scrollbar and find highlight clears
+  3:1, and so does every syntax token and ANSI color. `scripts/audit-contrast.py` runs the
+  same check over both variants, so a hand edited color cannot quietly regress.
 - A matching 16 color ANSI palette keeps the integrated terminal in the same family.
 - The gold title bar and status bar are the signature of the dark variant; if you prefer
   a fully neutral window, the light variant stays quiet from top to bottom.
-- The README previews are real VS Code window captures taken with the extension
-  installed, so what you see is what the theme renders.
+- The README previews are generated from the shipped theme JSON files by
+  `scripts/generate-store-screenshots.py`, so what you see is exactly what the theme
+  defines - and the script samples pixels back out of the rendered image to prove it.
 - The base palette was generated with [ThemeBake](https://themebake.pages.dev).
 
 ## Development
@@ -103,20 +110,27 @@ code --install-extension lilinhuang.galaxy-moon-theme
 Open this folder in VS Code and press **F5** to launch an Extension Development Host
 with the theme applied.
 
-To regenerate the README previews, with VS Code installed:
+To regenerate the README previews:
 
 ```
-python3 scripts/capture-real-screenshots.py
+python3 scripts/generate-store-screenshots.py
 ```
 
-The script builds a throwaway VS Code profile, installs this theme into it, opens the
-sample project under `scripts/demo-project` and captures the window for both variants
-into `store-assets/screenshots/en/`.
+The script builds a 1280x800 HTML mockup of the workbench from the two theme JSON files,
+screenshots it with headless Chromium through Playwright, writes both variants into
+`store-assets/screenshots/en/`, and finally samples a few pixels back out of each shot to
+verify they still match the JSON.
 
 The extension icon and the logo candidates under `assets/` are drawn from code:
 
 ```
 python3 scripts/generate-logo-candidates.py
+```
+
+To re-check contrast after editing a color:
+
+```
+python3 scripts/audit-contrast.py
 ```
 
 ## Feedback
