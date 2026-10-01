@@ -54,6 +54,7 @@ rose and teal only ever appear inside the code itself.
 | Title bar | `#FFFDCC` | `#E3CB54` | moon cream / gold |
 | Selection | `#CCCCCC` | `#3F3E3F` | soft grey |
 | Accent | `#6C6C6C` | `#E3CB54` | slate / gold |
+| Primary action | `#7E6320` | `#E3CB54` | bronze gold / gold |
 | Foreground | `#232323` | `#F1E9F1` | ink / lavender |
 
 ## Syntax
@@ -98,6 +99,9 @@ code --install-extension lilinhuang.galaxy-moon-theme
   3:1, and so does every syntax token and ANSI color. `scripts/audit-contrast.py` runs the
   same check over both variants, so a hand edited color cannot quietly regress.
 - A matching 16 color ANSI palette keeps the integrated terminal in the same family.
+- Chat, markdown and other embedded extension panels get the full set of content colors
+  (inline code, code blocks, block quotes, separators and secondary buttons), so they do
+  not quietly fall back to the default palette of VS Code.
 - The gold title bar and status bar are the signature of the dark variant; if you prefer
   a fully neutral window, the light variant stays quiet from top to bottom.
 - The README previews are generated from the shipped theme JSON files by
